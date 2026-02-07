@@ -7,7 +7,7 @@ import Education from "../components/Education";
 import Skills from "../components/Skills";
 import Interests from "../components/Interests";
 
-export default function AboutMePage() {
+export default function AboutMePage({onCloseFinder}) {
 
     const [selectedItem, setSelectedItem] = useState("Summary");
 
@@ -36,11 +36,15 @@ export default function AboutMePage() {
         }
     }
 
+    const onClose = () => {
+        onCloseFinder();
+    }
+
     return(
         <div className="aboutme">
             <div className="aboutme-header">
                 <div className="traffic-lights">
-                    <span className="light red"></span>
+                    <span className="light red" onClick={onClose}></span>
                     <span className="light yellow"></span>
                     <span className="light green"></span>
                 </div>

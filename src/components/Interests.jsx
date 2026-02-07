@@ -9,11 +9,14 @@ export default function Interests() {
             
             <div className="interests-item">
                 <h3>Weight lifting</h3>
+                <p>I started weightlifting when I was 17 years old. </p>
                 
             </div>
 
             <div className="interests-item">
                 <h3>Swimming</h3>
+                <p>I started swimming at a very young age in kindergarden. Then, I did FitKid and volleyball. 
+                    I found my way to swimming in 2023. My current goal is to participate in the Balatonátúszás competition in Hungary in 2027. </p>
                 
             </div>
 

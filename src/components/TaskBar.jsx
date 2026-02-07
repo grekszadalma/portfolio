@@ -7,7 +7,7 @@ import mailIcon from "../assets/mail.png";
 
 import {useState} from "react";
 
-export default function TaskBar({onOpenFinderWindow}) {
+export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow}) {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -22,6 +22,10 @@ export default function TaskBar({onOpenFinderWindow}) {
 
     const onOpenFinder = () => {
         onOpenFinderWindow();
+    }
+
+    const onCloseFinder = () => {
+        onCloseFinderWindow();
     }
 
     return(

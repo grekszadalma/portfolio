@@ -14,10 +14,15 @@ function MainPage() {
     setIsFinderOpen(true);
   }
 
+  const onCloseFinderWindow = () => {
+    setIsFinderOpen(false);
+  }
+
   return (
     <div className="page-bg">
-      {isFinderOpen ? <AboutMePage /> : null}
-      <TaskBar onOpenFinderWindow={onOpenFinderWindow}/>
+      <div className="main-toolbar"></div>
+      {isFinderOpen ? <AboutMePage onCloseFinder={onCloseFinderWindow} /> : null}
+      <TaskBar onOpenFinderWindow={onOpenFinderWindow} onCloseFinderWindow={onCloseFinderWindow}/>
     </div>
   );
 }
