@@ -1,0 +1,129 @@
+.aboutme {
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 550px;
+    background-color: #F5F5F7;
+    border-radius: 12px;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutme-header {
+    height: 45px;
+    background-color: #F5F5F7;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    border-bottom: 1px solid #D1D1D6;
+}
+
+.aboutme-title {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.light.red {
+    background-color: #FF5F57;
+}
+
+.light.yellow {
+    background-color: #FFBD2E;
+}
+
+.light.green {
+    background-color: #28C840;
+}
+
+.aboutme-body {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.aboutme-sidebar {
+    background-color:  white;  
+    width: 150px;
+    height: 100%;
+    padding: 10px;
+    backdrop-filter: blur(10px);  
+    border-right: 1px solid #D1D1D6;
+}
+
+.aboutme-content {
+    flex: 1;  /* takes remaining space */
+    background-color: white;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+}
+.profile-section {
+    text-align: center;
+    padding: 20px 10px;
+    border-bottom: 1px solid #D1D1D6;
+    margin-bottom: 10px;
+}
+
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #E5E5E7;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1D1D1F;
+    margin-bottom: 4px;
+}
+
+.profile-title {
+    font-size: 11px;
+    color: #86868B;
+}
+
+.sidebar-menu {
+    padding: 0 10px;
+}
+
+.sidebar-item {
+    padding: 8px 12px;
+    font-size: 13px;
+    color: #1D1D1F;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+}
+
+.sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-item.active {
+    background-color: #007AFF;
+    color: white;
+}
