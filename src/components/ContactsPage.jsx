@@ -1,4 +1,5 @@
 import "../css/aboutme.css";
+import "../css/contacts.css";
 import profilePhoto from "../assets/profil.jpg";
 import {useState} from "react";
 
@@ -58,7 +59,7 @@ export default function ContactsPage({onCloseFinder}) {
                     <span className="light yellow"></span>
                     <span className="light green"></span>
                 </div>
-                <div className="aboutme-title">About me</div>
+                <div className="aboutme-title">Contacts</div>
             </div>
             <div className="aboutme-body">
                 <div className="aboutme-sidebar">
@@ -66,21 +67,56 @@ export default function ContactsPage({onCloseFinder}) {
     
                 <div className="sidebar-menu">
                     <div 
-                    className={`sidebar-item ${selectedItem === "Summary" ? "active" : ""}`}
-                    onClick={() => setSelectedItem("Summary")}
+                    className="sidebar-item active"
+                    
                     >
-                        Summary
+                        Dalma Greksza
                     </div>
                     
                 </div>
                 </div>
                 <div className="aboutme-content">
-                     <div className="profile-section">
-                        <img src={profilePhoto} alt="Profile" className="profile-photo" />
-                        <h3 className="profile-name">Dalma Greksza</h3>
-                        <p className="profile-title">Software Engineer</p>
-                    </div>
-                </div>
+    <div className="profile-section">
+        <div className="picture-section">
+            <img src={profilePhoto} alt="Profile" className="profile-photo" />
+        </div>
+        <div className="name-section">
+                <h2 className="contact-name">Dalma Greksza</h2>
+                <p>Software Engineer</p>
+        </div>
+        
+        
+        
+    </div>
+    
+    <div className="contact-info">
+        <div className="contact-row">
+            <span className="contact-label">Iphone</span>
+            <span className="contact-value">+33 6 40 98 29 33</span>
+        </div>
+        
+        <div className="contact-row">
+            <span className="contact-label">Email</span>
+            <a href="mailto:dalma.greksza@gmail.com" className="contact-value contact-link">
+                dalma.greksza@gmail.com
+            </a>
+        </div>
+        
+        <div className="contact-row">
+            <span className="contact-label">Github</span>
+            <a href="https://github.com/grekszadalma" target="_blank" className="contact-value contact-link">
+                grekszadalma
+            </a>
+        </div>
+        
+        <div className="contact-row">
+            <span className="contact-label">Linkedin</span>
+            <a href="https://linkedin.com/in/dalma-greksza" target="_blank" className="contact-value contact-link">
+                dalma-greksza
+            </a>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     )

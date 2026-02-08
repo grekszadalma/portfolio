@@ -25,7 +25,7 @@
 
 .aboutme-title {
     position: absolute;
-    left: 30%;
+    left: 50%;
     transform: translateX(-50%);
     font-size: 13px;
     font-weight: 600;
@@ -71,38 +71,11 @@
 }
 
 .aboutme-content {
-    flex: 1;  /* takes remaining space */
+    flex: 1;
     background-color: white;
     padding: 20px;
     backdrop-filter: blur(10px);
     overflow-y: auto;
-}
-.profile-section {
-    text-align: center;
-    padding: 20px 10px;
-    border-bottom: 1px solid #D1D1D6;
-    margin-bottom: 10px;
-}
-
-.profile-photo {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 2px solid #E5E5E7;
-}
-
-.profile-name {
-    font-size: 14px;
-    font-weight: 600;
-    color: #1D1D1F;
-    margin-bottom: 4px;
-}
-
-.profile-title {
-    font-size: 11px;
-    color: #86868B;
 }
 
 .sidebar-menu {

@@ -4,6 +4,7 @@ import TaskBar from "../components/TaskBar";
 import AboutMePage from "./AboutMePage";
 import ToolBar from "./ToolBar";
 import ProjectsPage from "./ProjectsPage";
+import ContactsPage from "./ContactsPage";
 
 import {useState} from "react";
 
