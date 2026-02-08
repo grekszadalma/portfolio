@@ -10,6 +10,9 @@ import Interests from "../components/Interests";
 export default function AboutMePage({onCloseFinder}) {
 
     const [selectedItem, setSelectedItem] = useState("Summary");
+    const [position, setPosition] = useState({x: 0, y: 0});
+    const [isDragging, setIsDragging] = useState(false);
+    const [dragStart, setDragStart] = useState({x: 0, y: 0});
 
     const renderContent = () => {
         switch (selectedItem) {
@@ -40,9 +43,44 @@ export default function AboutMePage({onCloseFinder}) {
         onCloseFinder();
     }
 
+    const handleMouseDown = (e) => {
+        if (e.target.closest(".aboutme-header")) {
+            setIsDragging(true);
+            setDragStart({
+                x: e.clientX - position.x,
+                y: e.clientY - position.y
+            });
+        }
+    }
+
+    const handleMouseMove = (e) => {
+        if (isDragging) {
+            setPosition({
+                x: e.clientX - dragStart.x,
+                y: e.clientY - dragStart.y
+            });
+        }
+    }
+
+    const handleMouseUp = () => {
+        setIsDragging(false);
+    }
+
     return(
-        <div className="aboutme">
-            <div className="aboutme-header">
+        <div className="aboutme"
+        style={{
+                left: `${position.x}px`,
+                top: `${position.y}px`,
+                transform: 'none'  // Remove the centering transform
+            }}
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseUp}
+
+        
+        >
+            <div className="aboutme-header" style={{cursor: 'grab'}}>
                 <div className="traffic-lights">
                     <span className="light red" onClick={onClose}></span>
                     <span className="light yellow"></span>
