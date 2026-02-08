@@ -1,13 +1,14 @@
-import Icon from "../components/Icon";
+import TaskBarIcon from "./TaskBarIcon";
 import finderIcon from "../assets/finder.png";
 import projectsIcon from "../assets/projects.png";
 import photosIcon from "../assets/photos.png";
 import spotifyIcon from "../assets/spotify.png";
 import mailIcon from "../assets/mail.png";
+import contactsIcon from "../assets/contacts.png";
 
 import {useState} from "react";
 
-export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow}) {
+export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow, onOpenProjectsWindow, onCloseProjectsWindow}) {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -28,9 +29,17 @@ export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow}) {
         onCloseFinderWindow();
     }
 
+    const onOpenProjects = () => {
+        onOpenProjectsWindow();
+    }
+
+    const onCloseProjects = () => {
+        onCloseProjectsWindow();
+    }
+
     return(
         <div className="taskbar">
-            <Icon 
+            <TaskBarIcon 
                     key={0}
                     imageUrl={finderIcon} 
                     scale={getScale(0)}
@@ -38,28 +47,30 @@ export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow}) {
                     onMouseLeave={() => setHoveredIndex(null)}
                     onOpen={onOpenFinder}
                 />
-                <Icon 
+                <TaskBarIcon 
                     key={1}
                     imageUrl={projectsIcon} 
                     scale={getScale(1)}
                     onMouseEnter={() => setHoveredIndex(1)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    onOpen={onOpenProjects}
                 />
-                <Icon 
+                <TaskBarIcon 
                     key={2}
                     imageUrl={photosIcon} 
                     scale={getScale(2)}
                     onMouseEnter={() => setHoveredIndex(2)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 />
-                <Icon 
+                
+                <TaskBarIcon 
                     key={3}
-                    imageUrl={spotifyIcon} 
+                    imageUrl={contactsIcon} 
                     scale={getScale(3)}
                     onMouseEnter={() => setHoveredIndex(3)}
                     onMouseLeave={() => setHoveredIndex(null)}
                 />
-                <Icon 
+                <TaskBarIcon 
                     key={4}
                     imageUrl={mailIcon} 
                     scale={getScale(4)}

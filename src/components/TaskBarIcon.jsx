@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Icon({ imageUrl, scale, onMouseEnter, onMouseLeave, onOpen }) {
+export default function TaskBarIcon({ imageUrl, scale, onMouseEnter, onMouseLeave, onOpen }) {
     const [isJumping, setIsJumping] = useState(false);
 
     const handleDoubleClick = () => {

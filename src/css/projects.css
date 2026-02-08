@@ -1,0 +1,91 @@
+.projects {
+    position: fixed;
+    top: 80px;  
+    left: 40px;  
+    width: 750px;
+    height: 550px;
+    background-color: #F5F5F7;
+    border-radius: 12px;
+    z-index: 100;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    user-select: none;  
+}
+
+.projects-header {
+    height: 45px;
+    background-color: #F5F5F7;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    border-bottom: 1px solid #D1D1D6;
+}
+
+.projects-title {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: #1D1D1F;
+}
+
+.traffic-lights {
+    display: flex;
+    gap: 8px;
+}
+
+.light {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.light.red {
+    background-color: #FF5F57;
+}
+
+.light.yellow {
+    background-color: #FFBD2E;
+}
+
+.light.green {
+    background-color: #28C840;
+}
+
+.projects-body {
+    padding: 20px;  /* Add padding */
+    background-color: white;  /* Add background */
+    flex: 1;  /* Take remaining space */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+    max-width: 100%;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 15px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.project-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.folder-name {
+    font-size: 12px;
+    color: #1D1D1F;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
