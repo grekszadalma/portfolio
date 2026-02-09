@@ -90,11 +90,6 @@ export default function AboutMePage({onCloseFinder}) {
             </div>
             <div className="aboutme-body">
                 <div className="aboutme-sidebar">
-                    <div className="profile-section">
-                        <img src={profilePhoto} alt="Profile" className="profile-photo" />
-                        <h3 className="profile-name">Dalma Greksza</h3>
-                        <p className="profile-title">Software Engineer</p>
-                    </div>
     
                 <div className="sidebar-menu">
                     <div 

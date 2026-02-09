@@ -12,7 +12,7 @@ function MainPage() {
 
   const [isFinderOpen, setIsFinderOpen] = useState(false);
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
-
+  const [isContactsOpen, setIsContactsOpen] = useState(false);
 
 
   const onOpenFinderWindow = () => {
@@ -31,16 +31,24 @@ function MainPage() {
     setIsProjectsOpen(false);
   }
 
+  const onOpenContactsWindow = () => {
+    setIsContactsOpen(true);
+  }
+
+  const onCloseContactsWindow = () => {
+    setIsContactsOpen(false);
+  }
+
   return (
     <div className="page-bg">
       <ToolBar/>
       {isFinderOpen ? <AboutMePage onCloseFinder={onCloseFinderWindow} /> : null}
       {isProjectsOpen ? <ProjectsPage onCloseProjects={onCloseProjectsWindow} /> : null}
-      <ContactsPage />
+      {isContactsOpen ? <ContactsPage onCloseContacts={onCloseContactsWindow} /> : null}
       <TaskBar 
       onOpenFinderWindow={onOpenFinderWindow} onCloseFinderWindow={onCloseFinderWindow}
       onOpenProjectsWindow={onOpenProjectsWindow} onCloseProjectsWindow={onCloseProjectsWindow}
-      
+      onOpenContactsWindow={onOpenContactsWindow} onCloseContactsWindow={onCloseContactsWindow}
       
       />
     </div>

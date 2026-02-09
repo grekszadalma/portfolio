@@ -4,7 +4,7 @@ import profilePhoto from "../assets/profil.jpg";
 import {useState} from "react";
 
 
-export default function ContactsPage({onCloseFinder}) {
+export default function ContactsPage({onCloseContacts}) {
 
     const [selectedItem, setSelectedItem] = useState("Summary");
     const [position, setPosition] = useState({x: 80, y: 40});
@@ -13,7 +13,7 @@ export default function ContactsPage({onCloseFinder}) {
 
     
     const onClose = () => {
-        onCloseFinder();
+        onCloseContacts();
     }
 
     const handleMouseDown = (e) => {

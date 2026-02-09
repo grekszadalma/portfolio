@@ -8,7 +8,11 @@ import contactsIcon from "../assets/contacts.png";
 
 import {useState} from "react";
 
-export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow, onOpenProjectsWindow, onCloseProjectsWindow}) {
+export default function TaskBar({
+    onOpenFinderWindow, onCloseFinderWindow, 
+    onOpenProjectsWindow, onCloseProjectsWindow,
+    onOpenContactsWindow, onCloseContactsWindow
+}) {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -35,6 +39,14 @@ export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow, onOpen
 
     const onCloseProjects = () => {
         onCloseProjectsWindow();
+    }
+
+    const onOpenContacts = () => {
+        onOpenContactsWindow();
+    }
+
+    const onCloseContacts = () => {
+        onCloseContactsWindow();
     }
 
     return(
@@ -69,6 +81,7 @@ export default function TaskBar({onOpenFinderWindow, onCloseFinderWindow, onOpen
                     scale={getScale(3)}
                     onMouseEnter={() => setHoveredIndex(3)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    onOpen={onOpenContacts}
                 />
                 <TaskBarIcon 
                     key={4}
