@@ -2,10 +2,12 @@ import "../css/projects.css"
 import {useState} from "react";
 import folderIcon from "../assets/folder.png";
 import FolderIcon from "./FolderIcon";
+import PersonalProjectsPage from "./PersonalProjectsPage";
+import SchoolProjectsPage from "./SchoolProjectsPage";
 
 export default function ProjectsPage({onCloseProjects}) {
 
-    const [selectedItem, setSelectedItem] = useState("Summary");
+        const [selectedFolder, setSelectedFolder] = useState("");
         const [position, setPosition] = useState({x: 80, y: 40});
         const [isDragging, setIsDragging] = useState(false);
         const [dragStart, setDragStart] = useState({x: 0, y: 0});
@@ -36,6 +38,47 @@ export default function ProjectsPage({onCloseProjects}) {
         const handleMouseUp = () => {
             setIsDragging(false);
         }
+
+        const handleOpenFolder = (folderName) => {
+            setSelectedFolder(folderName);
+        }
+
+        const renderContent = () => {
+            if (selectedFolder === "") {
+                return (
+                    <div className="projects-body">
+                    <div className="projects-grid">
+                    <FolderIcon 
+                                    
+                                    imageUrl={folderIcon} 
+                                    name="School"
+                                    onDoubleClick={() => handleOpenFolder("School")}
+                                        
+                    />
+                    <FolderIcon 
+                                    
+                                    imageUrl={folderIcon} 
+                                    name="Personal"
+                                    onDoubleClick={() => handleOpenFolder("Personal")}
+                                        
+                    />
+
+                    </div>
+                    
+                    
+                
+                </div>
+                )
+            } else if (selectedFolder === "Personal") {
+                return(
+                    <PersonalProjectsPage />
+                )
+            } else if (selectedFolder === "School") {
+                return(
+                    <SchoolProjectsPage />
+                )
+            }
+        }
     
         return(
             <div className="projects"
@@ -59,28 +102,7 @@ export default function ProjectsPage({onCloseProjects}) {
                     </div>
                     <div className="projects-title">Projects</div>
                 </div>
-                <div className="projects-body">
-                    <div className="projects-grid">
-                    <FolderIcon 
-                                    
-                                    imageUrl={folderIcon} 
-                                    name="School"
-                                        
-                                        
-                    />
-                    <FolderIcon 
-                                    
-                                    imageUrl={folderIcon} 
-                                    name="Personal"
-                                        
-                                        
-                    />
-
-                    </div>
-                    
-                    
-                
-                </div>
+                {renderContent()}
             </div>
         )
 

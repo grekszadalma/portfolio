@@ -3,6 +3,7 @@ import finderIcon from "../assets/finder.png";
 import projectsIcon from "../assets/projects.png";
 import photosIcon from "../assets/photos.png";
 import spotifyIcon from "../assets/spotify.png";
+import notesIcon from "../assets/notes.png";
 import mailIcon from "../assets/mail.png";
 import contactsIcon from "../assets/contacts.png";
 
@@ -11,7 +12,8 @@ import {useState} from "react";
 export default function TaskBar({
     onOpenFinderWindow, onCloseFinderWindow, 
     onOpenProjectsWindow, onCloseProjectsWindow,
-    onOpenContactsWindow, onCloseContactsWindow
+    onOpenContactsWindow, onCloseContactsWindow,
+    onOpenMailWindow, onCloseMailWindow
 }) {
 
     const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -49,11 +51,19 @@ export default function TaskBar({
         onCloseContactsWindow();
     }
 
+    const onOpenMail = () => {
+        onOpenMailWindow();
+    }
+
+    const onCloseMail = () => {
+        onCloseMailWindow();
+    }
+
     return(
         <div className="taskbar">
             <TaskBarIcon 
                     key={0}
-                    imageUrl={finderIcon} 
+                    imageUrl={notesIcon} 
                     scale={getScale(0)}
                     onMouseEnter={() => setHoveredIndex(0)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -89,6 +99,7 @@ export default function TaskBar({
                     scale={getScale(4)}
                     onMouseEnter={() => setHoveredIndex(4)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    onOpen={onOpenMail}
                 />
            
             

@@ -3,9 +3,9 @@
 import { useState } from "react";
 import "../css/index.css";
 
-export default function FolderIcon({ imageUrl, name }) {
+export default function FolderIcon({ imageUrl, name, onDoubleClick }) {
     return (
-        <div className="project-item">
+        <div className="project-item" onDoubleClick={onDoubleClick}>
             <div 
                 className="folder-image"
                 style={{ 

@@ -2,13 +2,18 @@ import FolderIcon from "./FolderIcon"
 import budgrIcon from "../assets/dollar.png";
 
 
-export default function PersonalProjectsPage() {
+export default function SchoolProjectsPage() {
 
     const projects = [
         {
-            name: "Budgr",
+            name: "Database project",
             icon: budgrIcon,
             tech: ["React", "Spring Boot", "Python"]
+        },
+        {
+            name: "Tutored project",
+            icon: budgrIcon,
+            tech: ["React", "Express"]
         }
     ]
 
