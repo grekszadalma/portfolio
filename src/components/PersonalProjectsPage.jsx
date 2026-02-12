@@ -2,7 +2,7 @@ import FolderIcon from "./FolderIcon";
 import budgrIcon from "../assets/dollar.png";
 import { useState } from "react";
 import ProjectDetailModal from "./ProjectDetailModal";
-import projects from "../projects.js";
+import { personalProjects, schoolProjects } from "../projects.js";
 
 export default function PersonalProjectsPage({ onOpenProjectDetails }) {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -16,7 +16,7 @@ export default function PersonalProjectsPage({ onOpenProjectDetails }) {
   return (
     <div className="projects-body">
       <div className="projects-grid">
-        {projects.map((project, index) => (
+        {personalProjects.map((project, index) => (
           <FolderIcon
             key={index}
             name={project.name}

@@ -24,8 +24,10 @@ export default function Skills() {
                     <span>React</span>
                 </div>
                 <div className="skill-item">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="NodeJS" />
-                    <span>NodeJS</span>
+                    
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" />
+          
+                    <span>Express.js</span>
                 </div>
                 <div className="skill-item">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" />

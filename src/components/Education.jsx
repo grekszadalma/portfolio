@@ -30,7 +30,7 @@ export default function Education() {
                 <p className="school">Eötvös Loránd University, Budapest, Hungary</p>
                 <p className="date">2019 – 2022</p>
                 <p>
-                    Bachelor’s degree in Applied Mathematics and Programming.
+                    Pursued a Bachelor’s degree in Applied Mathematics and Programming.
                     Courses taught in Hungarian and English.
                 </p>
             </div>

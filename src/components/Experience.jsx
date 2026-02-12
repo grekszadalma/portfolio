@@ -7,51 +7,79 @@ export default function Experience() {
             <h2 className="section-title">Work Experience</h2>
             
             <div className="experience-item">
-            <h3>Software Engineering Apprentice</h3>
+            <h3 >Software Engineer Intern</h3>
             <p className="company">Siemens DISW (Supplyframe) • Grenoble</p>
             <p className="date">September 2024 – August 2025</p>
 
             <div className="project">
-                <h4>BOMAi Project</h4>
-                <p className="tech">Rust · JavaScript · Docker · AWS · Agile</p>
-                <ul>
-                    <li>
-                        Led a full-stack project to develop an automated tool for extracting data from Bills of Materials (Excel, PDF).
-                    </li>
-                    <li>
-                        Implemented a Rust-based backend and a JavaScript frontend.
-                    </li>
-                    <li>
-                        Containerized development and QA environments using Docker and deployed the application on AWS.
-                    </li>
-                    <li>
-                        Worked in an agile team with two Data Scientists.
-                    </li>
-                </ul>
-            </div>
+  <h4 className="experience-title">BOMAi Project</h4>
+  
+  <p className="tech">Rust · JavaScript · PostgreSQL · HTML · CSS · Jira</p>
+
+  <ul>
+    <li>
+        Developed a web application to extract data from Bills of Materials (BOMs) and automate BOM processing for Supplyframe’s EMS clients, leveraging machine learning models.
+    </li>
+
+    <li>
+      Designed the overall solution architecture and data models.
+    </li>
+    <li>
+      Implemented the database using PostgreSQL.
+    </li>
+    <li>
+      Built the backend using Rust and the frontend using HTML, CSS, and JavaScript.
+    </li>
+    <li>
+        Acted as the Product Owner for the project, collaborating daily with the Product Manager in French and presenting progress updates in English to the CTO and other stakeholders on a bi-monthly basis.
+    </li>
+
+    <li>
+      Wrote user stories and technical specifications in Jira.
+    </li>
+    <li>
+      Planned and participated in two-week Agile sprints.
+    </li>
+    <li>
+      Collaborated closely with two Data Scientists.
+    </li>
+    
+  </ul>
+</div>
+
 
             <div className="project">
-                <h4>Backend API Optimization</h4>
-                <p className="tech">Java · REST APIs</p>
-                <ul>
-                    <li>
-                        Improved a backend web service used daily by Supplyframe clients.
-                    </li>
-                    <li>
-                        Focused on performance, reliability, and maintainability.
-                    </li>
+            <h4 className="experience-title">Webquote Service Optimization</h4>
+            <p className="tech">Java · REST APIs</p>
+            <ul>
+                <li>
+                    Optimized Webquote, a critical module of Supplyframe's Buymanager product that retrieves he service retrieves electronic component prices from suppliers (e.g. Farnell, RS, Digikey) via external API sused daily by 10+ clients
+                </li>
+                <li>
+                    Analyzed and refactored Java codebase to resolve performance bottlenecks causing slow or missing pricing data
+                </li>
+                
+                <li>
+                    Migrated HTTP requests from HttpClient to OkHttp, significantly improving response times
+                </li>
+                <li>
+                    Implemented timeout mechanisms in threads to prevent blocking operations
+                </li>
+                <li>
+                    Presented daily progress updates in Agile team standups
+                </li>
                 </ul>
             </div>
         </div>
 
 
             <div className="experience-item">
-                <h3>Software Engineering Apprentice</h3>
+                <h3>Software Engineer and Systemes Intern</h3>
                 <p className="company">Grenoble Alpes Métropole • Grenoble</p>
                 <p className="date">October 2023 – August 2024</p>
 
                 <div className="project">
-                    <h4>Road Maintenance Platform Integration</h4>
+                    <h4 className="experience-title">Road Maintenance Platform Integration</h4>
                     <p className="tech">Python · REST APIs · Bash</p>
                     <ul>
                         <li>
@@ -67,7 +95,7 @@ export default function Experience() {
                 </div>
 
                 <div className="project">
-                    <h4>Security Monitoring & Awareness</h4>
+                    <h4 className="experience-title">Security Monitoring & Awareness</h4>
                     <p className="tech">Splunk · Cybersecurity</p>
                     <ul>
                         <li>

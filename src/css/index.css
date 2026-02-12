@@ -81,6 +81,11 @@
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+.experience-title {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+}
+
 .experience-item,
 .education-item,
 .interests-item {
