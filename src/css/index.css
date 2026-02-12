@@ -6,7 +6,7 @@
 .page-bg {
   min-height: 100vh;
   width: 100%;
-  background-image: url("../assets/background.jpg");
+  background-image: url("../assets/chartreuse.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,14 +27,14 @@
   left: 50%;
   transform: translateX(-50%);
 
-  width: 420px;
+  width: 400px;
   height: 70px;
   z-index: 9999;
 
   display: flex;
   gap: 10px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 
 
   background-color:rgba(250,250,250,0.4);
@@ -45,9 +45,8 @@
 }
 
 .icon {
-    height: 70px;
-    width: 70px;
-    /*background-image: url("../assets/finder.png");*/
+    height: 60px;
+    width: 60px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

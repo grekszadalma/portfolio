@@ -1,0 +1,13 @@
+<a href="https://www.flaticon.com/free-icons/iphone" title="iphone icons">Iphone icons created by Freepik - Flaticon</a>
+
+For example: websites, social media, blogs, ebooks, newsletters, etc.
+
+Copy this link and paste it wherever it's visible, close to where you’re using the resource. If that's not possible, place it at the footer of your website, blog or newsletter, or in the credits section.
+
+<a href="https://www.flaticon.com/free-icons/files-and-folders" title="files and folders icons">Files and folders icons created by juicy_fish - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/photos" title="photos icons">Photos icons created by khulqi Rosyid - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/contact" title="contact icons">Contact icons created by juicy_fish - Flaticon</a>
+
+<a href="https://www.flaticon.com/free-icons/email" title="email icons">Email icons created by Ricardo Ruiz - Flaticon</a>

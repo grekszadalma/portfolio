@@ -1,5 +1,5 @@
 import "../css/toolbar.css";
-import appleLogo from "../assets/applelogo.png";
+import pearLogo from "../assets/pearlogo.png";
 import volumeIcon from "../assets/volume.png";
 import wifiIcon from "../assets/wifi.png";
 import bluetoothIcon from "../assets/bluetooth.png";
@@ -37,7 +37,7 @@ export default function ToolBar() {
     return(
         <div className="main-toolbar">
             <div className="toolbar-left">
-                <img src={appleLogo} alt="Apple" className="toolbar-image" />
+                <img src={pearLogo} alt="Apple" className="toolbar-image" />
                 <span className="toolbar-text" style={{fontWeight: 'bold'}}>Dalma's page</span>
                 <span className="toolbar-text">File</span>
                 <span className="toolbar-text">Edit</span>

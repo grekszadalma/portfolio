@@ -1,11 +1,9 @@
 import TaskBarIcon from "./TaskBarIcon";
-import finderIcon from "../assets/finder.png";
-import projectsIcon from "../assets/projects.png";
+import projectsIcon from "../assets/folder.png";
 import photosIcon from "../assets/photos.png";
-import spotifyIcon from "../assets/spotify.png";
 import notesIcon from "../assets/notes.png";
-import mailIcon from "../assets/mail.png";
-import contactsIcon from "../assets/contacts.png";
+import mailIcon from "../assets/app.png";
+import contactsIcon from "../assets/book.png";
 
 import {useState} from "react";
 

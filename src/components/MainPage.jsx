@@ -9,6 +9,7 @@ import MailPage from "./MailPage";
 import ProjectDetailModal from "./ProjectDetailModal";
 
 import {useState} from "react";
+import PostIt from "./PostIt";
 
 function MainPage() {
 
