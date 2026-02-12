@@ -96,7 +96,7 @@ export default function MailPage({onCloseMail}) {
                             name="name"
                             value={formData.name}
                             onChange={handleChange}
-                            placeholder="Your name"
+                            placeholder="Enter your name"
                             required
                         />
                     </div>
@@ -108,7 +108,7 @@ export default function MailPage({onCloseMail}) {
                             name="email"
                             value={formData.email}
                             onChange={handleChange}
-                            placeholder="Please enter your email"
+                            placeholder="Enter your email"
                             required
                         />
                     </div>

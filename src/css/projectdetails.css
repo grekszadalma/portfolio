@@ -1,0 +1,116 @@
+.project-modal {
+    position: fixed;
+    width: 550px;
+    max-height: 600px;
+    background-color: #F5F5F7;
+    border-radius: 12px;
+    z-index: 300;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-header {
+    height: 45px;
+    background-color: #F5F5F7;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-bottom: 1px solid #D1D1D6;
+    position: relative;
+    user-select: none;
+}
+
+.project-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    font-weight: 600;
+    color: #1D1D1F;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project-body {
+    flex: 1;
+    background-color: white;
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.project-section {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.project-label {
+    font-size: 12px;
+    color: #86868B;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project-value {
+    font-size: 14px;
+    color: #1D1D1F;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project-description {
+    font-size: 14px;
+    color: #1D1D1F;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-badge {
+    padding: 6px 12px;
+    background-color: #E8F4FD;
+    color: #007AFF;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.project-details {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.project-details li {
+    font-size: 13px;
+    color: #1D1D1F;
+    line-height: 1.6;
+    margin-bottom: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.github-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007AFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: background-color 0.2s;
+}
+
+.github-link:hover {
+    background-color: #0051D5;
+}

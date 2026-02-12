@@ -5,7 +5,7 @@ import FolderIcon from "./FolderIcon";
 import PersonalProjectsPage from "./PersonalProjectsPage";
 import SchoolProjectsPage from "./SchoolProjectsPage";
 
-export default function ProjectsPage({onCloseProjects}) {
+export default function ProjectsPage({onCloseProjects, onOpenProjectDetails}) {
 
         const [selectedFolder, setSelectedFolder] = useState("");
         const [position, setPosition] = useState({x: 80, y: 40});
@@ -71,7 +71,7 @@ export default function ProjectsPage({onCloseProjects}) {
                 )
             } else if (selectedFolder === "Personal") {
                 return(
-                    <PersonalProjectsPage />
+                    <PersonalProjectsPage onOpenProjectDetails={onOpenProjectDetails}/>
                 )
             } else if (selectedFolder === "School") {
                 return(

@@ -6,6 +6,7 @@ import ToolBar from "./ToolBar";
 import ProjectsPage from "./ProjectsPage";
 import ContactsPage from "./ContactsPage";
 import MailPage from "./MailPage";
+import ProjectDetailModal from "./ProjectDetailModal";
 
 import {useState} from "react";
 
@@ -15,6 +16,18 @@ function MainPage() {
   const [isProjectsOpen, setIsProjectsOpen] = useState(false);
   const [isContactsOpen, setIsContactsOpen] = useState(false);
   const [isMailOpen, setIsMailOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isProjectDetailsOpen, setIsProjectDetailsOpen] = useState(false);
+
+  const onOpenProjectDetails = (project) => {
+    setSelectedProject(project);
+    setIsProjectDetailsOpen(true);
+  };
+
+  const onCloseProjectDetails = () => {
+    setIsProjectDetailsOpen(false);
+    setSelectedProject(null);
+  };
 
 
   const onOpenFinderWindow = () => {
@@ -55,9 +68,13 @@ function MainPage() {
     <div className="page-bg">
       <ToolBar/>
       {isFinderOpen ? <AboutMePage onCloseFinder={onCloseFinderWindow} /> : null}
-      {isProjectsOpen ? <ProjectsPage onCloseProjects={onCloseProjectsWindow} /> : null}
+      {isProjectsOpen ? <ProjectsPage onCloseProjects={onCloseProjectsWindow} onOpenProjectDetails={onOpenProjectDetails} /> : null}
       {isContactsOpen ? <ContactsPage onCloseContacts={onCloseContactsWindow} /> : null}
       {isMailOpen ? <MailPage onCloseMail={onCloseMailWindow}/> : null}
+      {isProjectDetailsOpen ? (
+        <ProjectDetailModal project={selectedProject} onClose={onCloseProjectDetails}  />
+      ) : null}
+      
       <TaskBar 
       onOpenFinderWindow={onOpenFinderWindow} onCloseFinderWindow={onCloseFinderWindow}
       onOpenProjectsWindow={onOpenProjectsWindow} onCloseProjectsWindow={onCloseProjectsWindow}

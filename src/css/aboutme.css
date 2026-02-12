@@ -13,6 +13,18 @@
     user-select: none;  
 }
 
+.aboutme.maximized {
+  position: fixed;
+  left: var(--desktop-padding);
+  top: calc(var(--toolbar-height) + var(--desktop-padding));
+  width: calc(100vw - (var(--desktop-padding) * 2));
+  height: calc(
+    100dvh - var(--toolbar-height) - var(--desktop-padding)
+    - var(--taskbar-height) - var(--taskbar-bottom-gap) - var(--desktop-padding)
+  );
+}
+
+
 .aboutme-header {
     height: 45px;
     background-color: #F5F5F7;
@@ -62,7 +74,7 @@
 }
 
 .aboutme-sidebar {
-    background-color:  white;  
+    background-color: rgb(255, 255, 255, 0.5); 
     width: 150px;
     height: 100%;
     padding: 10px;

@@ -64,6 +64,7 @@ export default function TaskBar({
             <TaskBarIcon 
                     key={0}
                     imageUrl={notesIcon} 
+                    title="About me"
                     scale={getScale(0)}
                     onMouseEnter={() => setHoveredIndex(0)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -71,7 +72,8 @@ export default function TaskBar({
                 />
                 <TaskBarIcon 
                     key={1}
-                    imageUrl={projectsIcon} 
+                    imageUrl={projectsIcon}
+                    title="My projects"
                     scale={getScale(1)}
                     onMouseEnter={() => setHoveredIndex(1)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -80,6 +82,7 @@ export default function TaskBar({
                 <TaskBarIcon 
                     key={2}
                     imageUrl={photosIcon} 
+                    title="Photos"
                     scale={getScale(2)}
                     onMouseEnter={() => setHoveredIndex(2)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -87,7 +90,8 @@ export default function TaskBar({
                 
                 <TaskBarIcon 
                     key={3}
-                    imageUrl={contactsIcon} 
+                    imageUrl={contactsIcon}
+                    title="Contacts"
                     scale={getScale(3)}
                     onMouseEnter={() => setHoveredIndex(3)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -96,6 +100,7 @@ export default function TaskBar({
                 <TaskBarIcon 
                     key={4}
                     imageUrl={mailIcon} 
+                    title="Contact me"
                     scale={getScale(4)}
                     onMouseEnter={() => setHoveredIndex(4)}
                     onMouseLeave={() => setHoveredIndex(null)}

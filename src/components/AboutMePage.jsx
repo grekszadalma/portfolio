@@ -10,9 +10,12 @@ import Interests from "../components/Interests";
 export default function AboutMePage({onCloseFinder}) {
 
     const [selectedItem, setSelectedItem] = useState("Summary");
+   
     const [position, setPosition] = useState({x: 80, y: 40});
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({x: 0, y: 0});
+    const [isMaximized, setIsMaximized] = useState(false);
+    const [prevPosition, setPrevPosition] = useState({ x: 80, y: 40 });
 
     const renderContent = () => {
         switch (selectedItem) {
@@ -44,6 +47,7 @@ export default function AboutMePage({onCloseFinder}) {
     }
 
     const handleMouseDown = (e) => {
+        if (isMaximized) return;
         if (e.target.closest(".aboutme-header")) {
             setIsDragging(true);
             setDragStart({
@@ -66,25 +70,45 @@ export default function AboutMePage({onCloseFinder}) {
         setIsDragging(false);
     }
 
+    const handleGreenClick = (e) => {
+    e.stopPropagation();
+
+    if (!isMaximized) {
+        // Save current position
+        setPrevPosition(position);
+
+        // Move window to top-left and make it fill the screen
+        setPosition({ x: 0, y: 0 });
+        setIsMaximized(true);
+    } else {
+        // Restore previous position
+        setPosition(prevPosition);
+        setIsMaximized(false);
+    }
+};
+
+
+
     return(
-        <div className="aboutme"
-        style={{
-                left: `${position.x}px`,
-                top: `${position.y}px`,
-                transform: 'none'  // Remove the centering transform
-            }}
+        <div
+        className={`aboutme ${isMaximized ? "maximized" : ""}`}
+        style={
+            isMaximized
+            ? { transform: "none" }
+            : { left: `${position.x}px`, top: `${position.y}px`, transform: "none" }
+        }
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseUp}
-
-        
         >
-            <div className="aboutme-header" style={{cursor: 'grab'}}>
+
+
+            <div className="aboutme-header" onDoubleClick={handleGreenClick} style={{cursor: 'grab'}}>
                 <div className="traffic-lights">
                     <span className="light red" style={{cursor: 'default'}} onClick={onClose}></span>
                     <span className="light yellow"></span>
-                    <span className="light green"></span>
+                    <span className="light green" style={{ cursor: "pointer" }}></span>
                 </div>
                 <div className="aboutme-title">About me</div>
             </div>
