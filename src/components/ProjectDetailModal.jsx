@@ -51,14 +51,15 @@ export default function ProjectDetailModal({ project, onClose }) {
             </div>
 
             <div className="project-body">
-                <div className="project-section">
-                    <span className="project-label">Type:</span>
-                    <span className="project-value">{project.type}</span>
-                </div>
 
                 <div className="project-section">
                     <span className="project-label">Description:</span>
                     <p className="project-description">{project.description}</p>
+                </div>
+
+                <div className="project-section">
+                    <span className="project-label">Type:</span>
+                    <span className="project-value">{project.type}</span>
                 </div>
 
                 {project.duration && (
@@ -72,6 +73,16 @@ export default function ProjectDetailModal({ project, onClose }) {
                     <div className="project-section">
                         <span className="project-label">Team:</span>
                         <span className="project-value">{project.teamSize} people</span>
+                    </div>
+                )}
+
+                {project.role && (
+                    <div className="project-section">
+                        <div className="tech-stack">
+                            {project.role.map((role, i) => (
+                                <span key={i} className="tech-badge">{role}</span>
+                            ))}
+                        </div>
                     </div>
                 )}
 

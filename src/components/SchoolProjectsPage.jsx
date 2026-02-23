@@ -2,7 +2,7 @@ import FolderIcon from "./FolderIcon"
 import budgrIcon from "../assets/dollar.png";
 import { personalProjects, schoolProjects } from "../projects.js";
 
-export default function SchoolProjectsPage() {
+export default function SchoolProjectsPage({onOpenProjectDetails}) {
 
 
     return(
@@ -13,7 +13,7 @@ export default function SchoolProjectsPage() {
                         key={index}
                         name={project.name}
                         imageUrl={project.icon}
-                        onClick={() => handleOnClickProject(project)}
+                        onDoubleClick={() => onOpenProjectDetails(project)}
                     />
                 ))}
             </div>

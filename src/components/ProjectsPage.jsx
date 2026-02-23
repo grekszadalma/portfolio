@@ -75,7 +75,7 @@ export default function ProjectsPage({onCloseProjects, onOpenProjectDetails}) {
                 )
             } else if (selectedFolder === "School") {
                 return(
-                    <SchoolProjectsPage />
+                    <SchoolProjectsPage onOpenProjectDetails={onOpenProjectDetails}/>
                 )
             }
         }

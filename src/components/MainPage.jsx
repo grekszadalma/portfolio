@@ -21,6 +21,7 @@ function MainPage() {
   const [isProjectDetailsOpen, setIsProjectDetailsOpen] = useState(false);
 
   const onOpenProjectDetails = (project) => {
+    console.log(project);
     setSelectedProject(project);
     setIsProjectDetailsOpen(true);
   };
