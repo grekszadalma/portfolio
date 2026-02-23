@@ -75,7 +75,7 @@ function MainPage() {
       {isProjectDetailsOpen ? (
         <ProjectDetailModal project={selectedProject} onClose={onCloseProjectDetails}  />
       ) : null}
-      
+      <PostIt />
       <TaskBar 
       onOpenFinderWindow={onOpenFinderWindow} onCloseFinderWindow={onCloseFinderWindow}
       onOpenProjectsWindow={onOpenProjectsWindow} onCloseProjectsWindow={onCloseProjectsWindow}

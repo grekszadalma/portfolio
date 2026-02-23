@@ -56,7 +56,7 @@ export default function Summary() {
 
       <p>
         In my free time, I practice weightlifting and swimming. I also enjoy reading and watching series,
-        especially mystery, thriller, and fantasy. My current favorite author is Freida McFadden — she’s
+        especially mystery, thriller, and fantasy. My current favorite author is Freida McFadden - she’s
         really killing it!
       </p>
         </div>

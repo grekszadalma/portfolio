@@ -1,7 +1,23 @@
-
-
 .postit-container {
-    height: 80px;
-    width: 100px;
-    background-color: rgb(84, 82, 82);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 10%;
+    right: 10%;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(242, 236, 174);
+    box-shadow: 0 0 3px 3px rgba(74, 74, 74, 0.7);
+}
+
+
+
+.postit-header {
+    width: 100%;
+    height: 15px;
+    background-color: rgb(242, 227, 12);
+}
+
+.postit-text {
+    margin: 8px;
 }
