@@ -5,6 +5,7 @@ import wifiIcon from "../assets/wifi.png";
 import bluetoothIcon from "../assets/bluetooth.png";
 import batteryIcon from "../assets/battery.png";
 import {useState, useEffect} from "react";
+import LanguageSelector from "./LanguageSelector";
 
 
 export default function ToolBar() {
@@ -47,6 +48,7 @@ export default function ToolBar() {
             </div>
             
             <div className="toolbar-right">
+                <LanguageSelector/>
                 <img src={volumeIcon} alt="Volume" className="toolbar-image" />
                 <img src={wifiIcon} alt="Wifi" className="toolbar-image" />
                 <img src={bluetoothIcon} alt="Bluetooth" className="toolbar-image" />

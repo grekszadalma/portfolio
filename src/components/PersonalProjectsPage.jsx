@@ -2,7 +2,7 @@ import FolderIcon from "./FolderIcon";
 import budgrIcon from "../assets/dollar.png";
 import { useState } from "react";
 import ProjectDetailModal from "./ProjectDetailModal";
-import { personalProjects, schoolProjects } from "../projects.js";
+import { personalProjects, schoolProjects } from "../content/projects.js";
 
 export default function PersonalProjectsPage({ onOpenProjectDetails }) {
   const [selectedProject, setSelectedProject] = useState(null);

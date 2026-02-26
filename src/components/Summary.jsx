@@ -29,12 +29,7 @@ export default function Summary() {
         I especially enjoyed discrete mathematics, programming in Java and Python,
         and working on web development projects.
       </p>
-      <p style={{ marginBottom: 10 }}>
-  I’ve been fascinated by foreign languages for as long as I can remember. I started learning French at 10 and English at 12.
-  Understanding people speaking different languages around me always felt a bit like being a spy (minus the cool gadgets),
-  and it sparked my curiosity for other cultures. On family vacations, I proudly served as my parents’ personal translator,
-  mostly negotiating hotel check-ins and restaurant menus, since they spoke neither English nor French.
-</p>
+      
 
       <p style={{ marginBottom: 10 }}>
         In 2022, I decided to step out of my comfort zone and applied for an Erasmus exchange program.
@@ -53,6 +48,17 @@ export default function Summary() {
 </p>
 
       </p>
+
+      <p style={{ marginBottom: 10 }}>
+  I’ve been fascinated by foreign languages for as long as I can remember. I started learning French at 10 and English at 12.
+  Understanding people speaking different languages around me always felt a bit like being a spy (minus the cool gadgets),
+  and it sparked my curiosity for other cultures. On family vacations, I proudly served as my parents’ personal translator,
+  mostly negotiating hotel check-ins and restaurant menus, since they spoke neither English nor French.
+</p>
+
+<p style={{ marginBottom: 10 }}>
+  I love traveling and get to know new cultures. One of my dreams is to do an Europe road trip in a van.
+</p>
 
       <p>
         In my free time, I practice weightlifting and swimming. I also enjoy reading and watching series,

@@ -1,6 +1,6 @@
 import FolderIcon from "./FolderIcon"
 import budgrIcon from "../assets/dollar.png";
-import { personalProjects, schoolProjects } from "../projects.js";
+import { personalProjects, schoolProjects } from "../content/projects.js";
 
 export default function SchoolProjectsPage({onOpenProjectDetails}) {
 

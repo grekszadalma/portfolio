@@ -1,6 +1,6 @@
 
-import dollarIcon from "./assets/dollar.png";
-import folderIcon from "./assets/folder.png";
+import dollarIcon from "../assets/dollar.png";
+import folderIcon from "../assets/folder.png";
 
 export const personalProjects = [
   {
