@@ -6,9 +6,12 @@ import bluetoothIcon from "../assets/bluetooth.png";
 import batteryIcon from "../assets/battery.png";
 import {useState, useEffect} from "react";
 import LanguageSelector from "./LanguageSelector";
+import { useLanguage } from "../contexts/LanguageContext";
 
 
 export default function ToolBar() {
+
+    const {t} = useLanguage();
 
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -39,12 +42,12 @@ export default function ToolBar() {
         <div className="main-toolbar">
             <div className="toolbar-left">
                 <img src={pearLogo} alt="Apple" className="toolbar-image" />
-                <span className="toolbar-text" style={{fontWeight: 'bold'}}>Dalma's page</span>
-                <span className="toolbar-text">File</span>
-                <span className="toolbar-text">Edit</span>
-                <span className="toolbar-text">View</span>
-                <span className="toolbar-text">Window</span>
-                <span className="toolbar-text">Help</span>
+                <span className="toolbar-text" style={{fontWeight: 'bold'}}>{t('toolbarTitle')}</span>
+                <span className="toolbar-text">{t('toolbarFile')}</span>
+                <span className="toolbar-text">{t('toolbarEdit')}</span>
+                <span className="toolbar-text">{t('toolbarView')}</span>
+                <span className="toolbar-text">{t('toolbarWindow')}</span>
+                <span className="toolbar-text">{t('toolbarHelp')}</span>
             </div>
             
             <div className="toolbar-right">

@@ -6,8 +6,11 @@ import Experience from "../components/Experience";
 import Education from "../components/Education";
 import Skills from "../components/Skills";
 import Interests from "../components/Interests";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function AboutMePage({onCloseFinder}) {
+
+    const { t } = useLanguage();
 
     const [selectedItem, setSelectedItem] = useState("Summary");
    
@@ -110,7 +113,7 @@ export default function AboutMePage({onCloseFinder}) {
                     <span className="light yellow"></span>
                     <span className="light green" style={{ cursor: "pointer" }}></span>
                 </div>
-                <div className="aboutme-title">About me</div>
+                <div className="aboutme-title">{t('aboutMeTitle')}</div>
             </div>
             <div className="aboutme-body">
                 <div className="aboutme-sidebar">
@@ -120,13 +123,13 @@ export default function AboutMePage({onCloseFinder}) {
                     className={`sidebar-item ${selectedItem === "Summary" ? "active" : ""}`}
                     onClick={() => setSelectedItem("Summary")}
                     >
-                        Summary
+                        {t('summary')}
                     </div>
                     <div 
                     className={`sidebar-item ${selectedItem === "Work experience" ? "active" : ""}`}
                     onClick={() => setSelectedItem("Work experience")}
                     >
-                        Work experience
+                        {t('workExperience')}
                     </div>
                     <div 
                     className={`sidebar-item ${selectedItem === "Education" ? "active" : ""}`}

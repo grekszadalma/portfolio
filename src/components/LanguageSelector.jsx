@@ -3,11 +3,12 @@ import frFlag from "../assets/flag_fr.png";
 import huFlag from "../assets/flag_hu.png";
 import { useState } from "react";
 import "../css/languageselector.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 
 export default function LanguageSelector() {
     const [isOpen, setIsOpen] = useState(false);
-    const [selected, setSelected] = useState("en");
+    const {language, setLanguage} = useLanguage();
 
     const languages = [
         { code: "en", name: "English", flag: ukFlag },
@@ -15,14 +16,14 @@ export default function LanguageSelector() {
         { code: "hu", name: "Magyar", flag: huFlag }
     ];
 
-    const selectedLang = languages.find(lang => lang.code === selected);
+    const selectedLang = languages.find(lang => lang.code === language);
 
 
      return (
         <div className="custom-select">
             <select 
-                value={selected} 
-                onChange={(e) => setSelected(e.target.value)}
+                value={language} 
+                onChange={(e) => setLanguage(e.target.value)}
                 className="hidden-select"
             >
                 {languages.map(lang => (

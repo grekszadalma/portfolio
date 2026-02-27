@@ -6,6 +6,7 @@ import mailIcon from "../assets/app.png";
 import contactsIcon from "../assets/book.png";
 
 import {useState} from "react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function TaskBar({
     onOpenFinderWindow, onCloseFinderWindow, 
@@ -14,15 +15,17 @@ export default function TaskBar({
     onOpenMailWindow, onCloseMailWindow
 }) {
 
+    const {t} = useLanguage();
+
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
     const getScale = (index) => {
         if (hoveredIndex === null) return 1;
         const distance = Math.abs(index - hoveredIndex);
-        if (distance === 0) return 1.3;      // hovered icon
-        if (distance === 1) return 1.15;      // adjacent icons
-        if (distance === 2) return 1.05;     // 2 away
-        return 1;                             // rest
+        if (distance === 0) return 1.3;      
+        if (distance === 1) return 1.15;     
+        if (distance === 2) return 1.05;     
+        return 1;                             
     };
 
     const onOpenFinder = () => {
@@ -62,7 +65,7 @@ export default function TaskBar({
             <TaskBarIcon 
                     key={0}
                     imageUrl={notesIcon} 
-                    title="About me"
+                    title={t('aboutMe')}
                     scale={getScale(0)}
                     onMouseEnter={() => setHoveredIndex(0)}
                     onMouseLeave={() => setHoveredIndex(null)}
@@ -71,7 +74,7 @@ export default function TaskBar({
                 <TaskBarIcon 
                     key={1}
                     imageUrl={projectsIcon}
-                    title="My projects"
+                    title={t('projects')}
                     scale={getScale(1)}
                     onMouseEnter={() => setHoveredIndex(1)}
                     onMouseLeave={() => setHoveredIndex(null)}
