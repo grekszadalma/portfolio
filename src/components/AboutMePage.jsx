@@ -135,19 +135,19 @@ export default function AboutMePage({onCloseFinder}) {
                     className={`sidebar-item ${selectedItem === "Education" ? "active" : ""}`}
                     onClick={() => setSelectedItem("Education")}
                     >
-                        Education
+                        {t('education')}
                     </div>
                     <div 
                     className={`sidebar-item ${selectedItem === "Skills" ? "active" : ""}`}
                     onClick={() => setSelectedItem("Skills")}
                     >
-                        Skills
+                        {t('skills')}
                     </div>
                     <div 
                     className={`sidebar-item ${selectedItem === "Interests" ? "active" : ""}`}
                     onClick={() => setSelectedItem("Interests")}
                     >
-                        Interests
+                        {t('interests')}
                     </div>
                 </div>
                 </div>
